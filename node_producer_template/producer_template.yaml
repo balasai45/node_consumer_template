@@ -1,8 +1,8 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: Node-Consumer-template
-  title: Node Consumer App Template
+  name: Node-Producer-template
+  title: Node Producer App Template
   description: Create a basic Producer running app
   tags:
     - recommended
@@ -56,10 +56,10 @@ spec:
               - github.com
   steps:
     - id: fetch
-      name: Template Node Consumer Skeleton
+      name: Template Skeleton
       action: fetch:template
       input:
-        url: ./node_consumer_skeleton
+        url: ./skeleton
         values:
           bootstrap-servers: ${{ parameters.bootstrap-servers }}
           topic: ${{ parameters.topic }}
